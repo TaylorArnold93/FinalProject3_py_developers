@@ -1,4 +1,16 @@
 body {
     background-color: lightgray;
+    color: rgb(0, 0, 0);
 }
 
+.navbar-light{
+    background-color: rgb(75, 37, 100);
+}
+
+.navbar-brand{
+    color: white;
+}
+
+fieldset{
+    align-content: center;
+}
