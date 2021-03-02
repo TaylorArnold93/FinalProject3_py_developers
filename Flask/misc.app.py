@@ -1,4 +1,4 @@
-# bmi = float(request.args.get("bmi")) or 0
+ 
 
 #     # We one-hot-encoded the categorical columns
 #     # Therefore we create a mapper for each of these features,
@@ -18,7 +18,7 @@
         "never_smoked": [0, 1, 0],
         "smokes": [1, 0, 0]
         "Unknown": [0,0,1,0]
-#     }
+    }
 #     # smoking_status_mapper = {
 #     #     "currently_smokes": [1, 0],
 #     #     "doesnt_currently_smoke": [0, 1]
