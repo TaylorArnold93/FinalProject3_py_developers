@@ -1,24 +1,3 @@
- 
-
-#     # We one-hot-encoded the categorical columns
-#     # Therefore we create a mapper for each of these features,
-#     #  to "convert" the users input to the correct format
-     work_type_mapper = {
-        "self_employed": [1,0,0],
-        "children": [0,1,0],
-        "Govt_job": [0,1,0]
-        "private": [0,0,1]
-        "never_worked": [0,1,0]      
-     }
-
-    work_type = request.args.get("work_type")
-     
-     smoking_status_mapper = {
-        "formerly_smoked": [0, 0, 1],
-        "never_smoked": [0, 1, 0],
-        "smokes": [1, 0, 0]
-        "Unknown": [0,0,1,0]
-    }
 #     # smoking_status_mapper = {
 #     #     "currently_smokes": [1, 0],
 #     #     "doesnt_currently_smoke": [0, 1]

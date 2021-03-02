@@ -10,9 +10,6 @@ classifier = joblib.load("stroke_predictor.model")
 # Defining the Flask app
 app = Flask(__name__)
 
-# Loading the Pickle 
-model = pickle.load(open('model.pkl', 'rb'))
-
 # Define the index.html
 @app.route('/')
 def home():
