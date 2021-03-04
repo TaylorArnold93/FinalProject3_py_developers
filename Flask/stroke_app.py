@@ -52,7 +52,7 @@ def predict():
     print(output)
 
     if output == 0:
-        return render_template('index.html', prediction_text='The Patient is NOT likely to have a Stroke')
+        return render_template('index.html', prediction_text='The patient is NOT likely to have a Stroke')
     else:
          return render_template('index.html', prediction_text='The patient is LIKELY to have a Stroke')
         
