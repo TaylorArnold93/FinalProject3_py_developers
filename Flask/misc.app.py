@@ -1,9 +1,3 @@
-#     # smoking_status_mapper = {
-#     #     "currently_smokes": [1, 0],
-#     #     "doesnt_currently_smoke": [0, 1]
-#     # }
-#     smoking_status = request.args.get("smoking_status")
-
 #     hypertension_mapper = {
 #         0: [1, 0],
 #         1: [0, 1]
