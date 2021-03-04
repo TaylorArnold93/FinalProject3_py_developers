@@ -17,7 +17,7 @@ def home():
 
 # Create API endpoint based on HTML form
 @app.route("/api/predict")
- def predict():
+def predict():
     age = float(request.args.get("age")) or 0
     avg_glucose_level = float(request.args.get("agl")) or 0
     bmi = float(request.args.get("bmi")) or 0
