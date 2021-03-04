@@ -34,73 +34,63 @@
     </nav>
 
     <!-- Create Bootstrap container -->
-    <div class="container">
+    <div class="container"   >
 
         <!-- New Bootstram row -->
-        <div class="row">
+        <div class="row" >
 
             <!-- Bootstrap row 1 column 1 -->
             <div class="col-md-6">
                 <img src= "image (3).png" height=275px width="210%">
+              </div> 
 
-    
-    <h1>Enter your information to calculate Diabetes risk.</h1>
-    <hr> 
-    <table border = "1">
+  <h1> Test</h1>
     <!-- Create form -->
-    <form id="stroke_form" action="/api/predict" method="get" target="blank">
-        <fieldset>
-
-        <!-- Numerical input fields -->
-            <h4>Please enter a number in the following fields.</h4>
-            <input type="text" name="age" id="age"> &nbsp; Age <br>
-            <input type="text" name="agl" id="agl"> &nbsp; Average Glucose Level <br>
-            <!-- <input type="text" name="bmi" id="bmi"> &nbsp; BMI <br> -->
-
-        <!-- Drop-down option fileds -->
-            <h4>Please select the drop-down option that is most relevant to your work type.</h4>
-            <select id="work_type" name="work_type">  Work type 
-                <option value="self_employed">Self employed</option>
-                <option value="employer_employed">Employer employed</option>
-                <option value="children">Child</option>
-            </select>
-
-            <select id="smoking_status" name="smoking_status"> Smoking status 
-                <option value="smokes">Smokes</option>
-                <option value="formerly_smoked">Formerly smoked</option>
-                <option value="never_smoked">Never smoked</option>
-
-            </select>
+        <form id="stroke_form" action="/api/predict" method="get" target="blank">
+            <fieldset>
+                <table border="0px"  >
+                <tr><td>&nbsp;</td></tr>
             
-            <!-- Checkbox fields -->
-            <h4>Please check the box if any of the following applies to you</h4>
-            <input id="has_hypertension" type="checkbox" name="hypertension"> Has Hypertension <br>
-            <input id="has_heart_disease" type="checkbox" name="heart_disease"> Has Heart Disease <br>
-            <input id="ever_married" type="checkbox"name="ever_married"> Ever married <br>
 
-        <br>
+                <tr> <td>Enter your information to calculate Stroke risk. </td></tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr> <td> Please enter a number in the following fields.</td></tr>
+                <tr>   <td><input type="text" name="age" id="age">   &nbsp; Age </td> </tr>
+                <tr>   <td> <input type="text" name="agl" id="agl">  &nbsp; Average Glucose Level </td>  </tr>
 
-        <!-- Submit Button -->
-        <button>
-            <input type="submit" value="Get results">
-        </button>
-   
-        </fieldset>
-   </form> 
+                <tr><td>&nbsp;</td></tr>
+                <tr> <td>Please select the drop-down option that is most relevant to your work type.</td></tr>
+                <tr>   <td>  <select id="work_type" name="work_type">  Work type 
+                    <option value="self_employed">Self employed</option>
+                    <option value="employer_employed">Employer employed</option>
+                    <option value="children">Child</option>
+                </select> </td>  </tr>
 
-        </div>
-        </div>
-    </table>
-        <!-- Create Survery-->
-    <form id="diabetes_survey" action="/api/predict" method="get" target="blank">
-        <fieldset>
+                <tr> <td> <select id="smoking_status" name="smoking_status"> Smoking status 
+                    <option value="smokes">Smokes</option>
+                    <option value="formerly_smoked">Formerly smoked</option>
+                    <option value="never_smoked">Never smoked</option>
 
-        <!-- Numerical Inputs-->
-            <h4>Please select the drop down </h4>
+                </select></td> </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>  <td>  Please check the box if any of the following applies to you </td></tr>
+
+                <tr> <td><input id="has_hypertension" type="checkbox" name="hypertension"> Has Hypertension </td></tr>
+                <tr> <td><input id="has_heart_disease" type="checkbox" name="heart_disease"> Has Heart Disease</td></tr>
+                <tr> <td><input id="ever_married" type="checkbox"name="ever_married"> Ever married </td></tr>
+                <tr> <td>     <!-- Submit Button -->
+                    <button>
+                        <input type="submit" value="Get results">
+                    </button>
+                </td></tr>
 
 
+                </table>
 
-        </fieldset>
-    </form>
+                </table>
+            
+        </form>
+    </div>
+    </div>
 </body>
 </html>

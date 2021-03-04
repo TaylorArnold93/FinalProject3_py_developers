@@ -14,3 +14,7 @@ body {
 fieldset{
     align-content: center;
 }
+
+th,  tr, td {
+    font-size: 27px;
+  }
