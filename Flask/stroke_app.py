@@ -24,22 +24,23 @@ def predict():
     bmi = float(request.args.get("bmi")) or 0
 
     work_type_mapper = {
-        "self_employed": [1,0,0],
-        "children": [0,1,0],
-        "Govt_job": [0,1,0],
-        "private" : [0,0,1],
-        "never_worked": [0,1,0]      
+        "self_employed": [1,0,0,0,0],
+        "children": [0,1,0,0,0],
+        "Govt_job": [0,0,1,0,0],
+        "private" : [0,0,0,1,0],
+        "never_worked": [0,0,0,0,1]      
      }
 
     work_type = request.args.get("work_type")
 
     smoking_status_mapper = {
-        "formerly_smoked": [0, 0, 1],
-        "never_smoked": [0, 1, 0],
-        "smokes": [1, 0, 0],
-        "Unknown": [0,0,1,0]
+        "formerly_smoked": [0, 0, 1, 0],
+        "never_smoked": [0, 1, 0, 0],
+        "smokes": [1, 0, 0, 0],
+        "Unknown": [0, 0, 0, 1]
     }
-
+    
+    smoking_status = request.args.get("smoking_status")
 
     features = [float(x) for x in request.form.values()]
     final_features = [np.array(features)]
@@ -51,9 +52,9 @@ def predict():
     print(output)
 
     if output == 0:
-        return render_template('index.html', prediction_text='THE PATIENT IS NOT LIKELY TO HAVE A HEART FAILURE')
+        return render_template('index.html', prediction_text='The Patient is NOT likely to have a Stroke')
     else:
-         return render_template('index.html', prediction_text='THE PATIENT IS LIKELY TO HAVE A HEART FAILURE')
+         return render_template('index.html', prediction_text='The patient is LIKELY to have a Stroke')
         
 @app.route('/predict_api',methods=['POST'])
 def results():
