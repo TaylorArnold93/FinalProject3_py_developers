@@ -1,26 +1,3 @@
-# # bmi = float(request.args.get("bmi")) or 0
-
-#     # We one-hot-encoded the categorical columns
-#     # Therefore we create a mapper for each of these features,
-#     #  to "convert" the users input to the correct format
-#     work_type_mapper = {
-#         "self_employed": [1,0,0],
-#         "children": [0,1,0],
-#         "employer_employed": [0,0,1]
-#     }
-#     work_type = request.args.get("work_type")
-
-#     # In our initial data analysis we noticed that,
-#     # the smoking_status data does not reflect statements made in a scientific journal
-#     # on the effects of smoking on having a stroke
-#     # We therefore opted not to use smoking_status as a feature
-#     # We leave it commented it out here,
-#     # so that we may return at a later time if we decide to use this in some way
-#     smoking_status_mapper = {
-#         "formerly_smoked": [0, 0, 1],
-#         "never_smoked": [0, 1, 0],
-#         "smokes": [1, 0, 0]
-#     }
 #     # smoking_status_mapper = {
 #     #     "currently_smokes": [1, 0],
 #     #     "doesnt_currently_smoke": [0, 1]
