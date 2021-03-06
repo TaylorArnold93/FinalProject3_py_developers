@@ -6,7 +6,7 @@ Final Project III - ﻿py_developers
 
 * Abraham - Machine Learning
 
-* Isaac Martinez - HTML
+* Isaac Martinez - index.HTML
 
 * Joshua Barr - App.py / HTML
 
