@@ -21,7 +21,7 @@ https://stroke-app-group7.herokuapp.com/
 
 
 # Data Reference:
-* https://www.kaggle.com/fedesoriano/stroke-prediction-dataset
+https://www.kaggle.com/fedesoriano/stroke-prediction-dataset
 
 
 # Stroke Predicition Analysis:
