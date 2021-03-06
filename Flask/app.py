@@ -49,7 +49,7 @@ def home():
     else:
          return render_template('index.html', prediction_text='The patient is LIKELY to have a Stroke')
         
-@app.route('/predict_api',methods=['POST'])
+@app.route('/',methods=['POST'])
 def results():
 
     data = request.get_json(force=True)
