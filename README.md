@@ -10,7 +10,7 @@ Final Project III - ﻿py_developers
 
 * Joshua Barr - App.py / HTML
 
-* Natalie Aviles - HTML
+* Natalie Aviles - Lesson HTML
 
 * Taylor Wolff - App.py / Heroku / Flask 
 
