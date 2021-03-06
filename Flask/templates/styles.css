@@ -1,0 +1,27 @@
+body {
+    background-color: lightgray;
+    color: rgb(0, 0, 0);
+}
+
+.navbar-light{
+    background-color: rgb(75, 37, 100);
+}
+
+.navbar-brand{
+    color: white;
+}
+
+fieldset{
+    align-content: center;
+}
+
+th,  tr, td {
+    font-size: 40px;
+  }
+
+h1 {
+    border: 2px #eee solid;
+    color: rgb(60, 1, 75);
+    text-align: center;
+    padding: 10px;
+}
