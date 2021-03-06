@@ -2,10 +2,14 @@
 
 import numpy as np
 from flask import Flask, request, jsonify, render_template,  url_for, flash, redirect
-from sklearn.preprocessing import StandardScaler
 
 # Defining the Flask app
 app = Flask(__name__)
+
+@app.route('/learn-more', methods=['GET'])
+def lessons():
+    return render_template('Lessons.html')
+
 
 # Define the index.html
 @app.route('/', methods=['GET', 'POST'])
