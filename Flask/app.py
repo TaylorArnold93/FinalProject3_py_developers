@@ -8,16 +8,15 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 
 # Define the index.html
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
-    print(request)
     output = 0
-    if request.args: 
-        age = float(request.args.get("age")) or 0
-        work_type = request.args.get("work_type")
-        smoking_status = request.args.get("smoking_status")
-        avg_glucose_level = float(request.args.get("avg_glucose_level")) or 0
-        hypertension = request.args.get("hypertension")
+    if request.method == "POST":
+        age = float(request.form.get("age")) or 0
+        work_type = request.form.get("work_type")
+        smoking_status = request.form.get("smoking_status")
+        avg_glucose_level = float(request.form.get("avg_glucose_level", 0)) or 0
+        hypertension = request.form.get("hypertension")
         if int(age) > 60: 
             output += 0.25
         if smoking_status == "smokes":
@@ -38,18 +37,20 @@ def home():
             output += 0.0
         if int(avg_glucose_level) > 100:
             output += 0.50
-        print(hypertension)
         if hypertension == "on":
             output += 0.75
         else: 
             output += 0.0
-
-    if output < 0.50:
-        return render_template('index.html', prediction_text='The patient is NOT likely to have a Stroke')
+        if output < 0.50:
+            prediction_text = 'The patient is NOT likely to have a Stroke'
+        else:
+            prediction_text = 'The patient is LIKELY to have a Stroke'
+        return render_template('index.html', prediction_text=prediction_text)
     else:
-         return render_template('index.html', prediction_text='The patient is LIKELY to have a Stroke')
+         return render_template('index.html')
+
         
-@app.route('/',methods=['POST'])
+"""@app.route('/',methods=['POST'])
 def results():
 
     data = request.get_json(force=True)
@@ -57,7 +58,7 @@ def results():
 
     output = prediction[0]
     return jsonify(output)
-
+"""
 
 # Run Flask app
 if __name__ == "__main__":
